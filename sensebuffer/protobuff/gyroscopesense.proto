@@ -1,0 +1,18 @@
+syntax = "proto3";
+package GyroscopeSense;
+import "google/protobuf/timestamp.proto";
+
+message GyroscopeQuanta {
+    google.protobuf.Timestamp time = 1;
+    GyroscopeProfile profile = 2;
+
+    message GyroscopeProfile {
+        float gx = 1;
+        float gy = 2;
+        float gz = 3;
+    }
+}
+
+message GyroscopeLog {
+    repeated GyroscopeQuanta quantas = 1;
+}

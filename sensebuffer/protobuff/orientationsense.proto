@@ -1,0 +1,18 @@
+syntax = "proto3";
+package OrientationSense;
+import "google/protobuf/timestamp.proto";
+
+message OrientationQuanta {
+    google.protobuf.Timestamp time = 1;
+    OrientationProfile profile = 2;
+
+    message OrientationProfile {
+        float ox = 1;
+        float oy = 2;
+        float oz = 3;
+    }
+}
+
+message OrientationLog {
+    repeated OrientationQuanta quantas = 1;
+}

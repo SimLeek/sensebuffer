@@ -1,0 +1,18 @@
+syntax = "proto3";
+package RotationSense;
+import "google/protobuf/timestamp.proto";
+
+message RotationQuanta {
+    google.protobuf.Timestamp time = 1;
+    RotationProfile profile = 2;
+
+    message RotationProfile {
+        float rx = 1;
+        float ry = 2;
+        float rz = 3;
+    }
+}
+
+message RotationLog {
+    repeated RotationQuanta quantas = 1;
+}

@@ -1,0 +1,16 @@
+syntax = "proto3";
+package PressureSense;
+import "google/protobuf/timestamp.proto";
+
+message PressureQuanta {
+    google.protobuf.Timestamp time = 1;
+    PressureProfile profile = 2;
+
+    message PressureProfile {
+        float mpa = 1;
+    }
+}
+
+message GyroscopeLog {
+    repeated PressureQuanta quantas = 1;
+}

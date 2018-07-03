@@ -1,0 +1,18 @@
+syntax = "proto3";
+package CompassSense;
+import "google/protobuf/timestamp.proto";
+
+message CompassQuanta {
+    google.protobuf.Timestamp time = 1;
+    CompassProfile profile = 2;
+
+    message CompassProfile {
+        float mx = 1;
+        float my = 2;
+        float mz = 3;
+    }
+}
+
+message CompassLog {
+    repeated CompassQuanta quantas = 1;
+}

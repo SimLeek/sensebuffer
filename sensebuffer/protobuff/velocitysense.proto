@@ -1,0 +1,18 @@
+syntax = "proto3";
+package VelocitySense;
+import "google/protobuf/timestamp.proto";
+
+message VelocityQuanta {
+    google.protobuf.Timestamp time = 1;
+    VelocityProfile profile = 2;
+
+    message VelocityProfile {
+        float x = 1;
+        float y = 2;
+        float z = 3;
+    }
+}
+
+message VelocityLog {
+    repeated VelocityQuanta quantas = 1;
+}

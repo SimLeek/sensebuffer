@@ -1,0 +1,20 @@
+syntax = "proto3";
+package MicrophoneSense;
+import "google/protobuf/timestamp.proto";
+
+message MicrophoneQuanta {
+    google.protobuf.Timestamp time = 1;
+    MicrophoneSampleProfile profile = 2;
+
+    // https://stackoverflow.com/a/39248610/782170
+    message MicrophoneSampleProfile {
+        int32 total_time = 1;
+        int32 num_samples = 2;
+        int32 bit_depth = 3;
+        bytes mic_samples = 4;
+    }
+}
+
+message MicrophoneLog {
+    repeated MicrophoneQuanta quantas = 1;
+}

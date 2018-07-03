@@ -1,0 +1,17 @@
+syntax = "proto3";
+package WifiSense;
+import "google/protobuf/timestamp.proto";
+
+message WifiQuanta {
+    google.protobuf.Timestamp time = 1;
+    repeated WifiProfile profiles = 2;
+
+    message WifiProfile {
+        string ssid = 1;
+        string bssid = 2;
+    }
+}
+
+message WifiLog {
+    repeated WifiQuanta quantas = 1;
+}

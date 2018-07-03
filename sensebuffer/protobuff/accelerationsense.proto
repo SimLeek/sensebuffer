@@ -1,0 +1,18 @@
+syntax = "proto3";
+package AccelerationSense;
+import "google/protobuf/timestamp.proto";
+
+message AccelerationQuanta {
+    google.protobuf.Timestamp time = 1;
+    AccelerationProfile profile = 2;
+
+    message AccelerationProfile {
+        float ax = 1;
+        float ay = 2;
+        float az = 3;
+    }
+}
+
+message AccelerationLog {
+    repeated AccelerationQuanta quantas = 1;
+}

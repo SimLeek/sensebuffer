@@ -1,0 +1,16 @@
+syntax = "proto3";
+package TemperatureSense;
+import "google/protobuf/timestamp.proto";
+
+message TemperatureQuanta {
+    google.protobuf.Timestamp time = 1;
+    TemperatureProfile profile = 2;
+
+    message TemperatureProfile {
+        float c = 3;
+    }
+}
+
+message TemperatureLog {
+    repeated TemperatureQuanta quantas = 1;
+}
