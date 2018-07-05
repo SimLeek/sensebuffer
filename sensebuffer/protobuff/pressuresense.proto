@@ -11,6 +11,6 @@ message PressureQuanta {
     }
 }
 
-message GyroscopeLog {
+message PressureLog {
     repeated PressureQuanta quantas = 1;
 }

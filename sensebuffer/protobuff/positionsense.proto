@@ -2,7 +2,7 @@ syntax = "proto3";
 package PositiionSense;
 import "google/protobuf/timestamp.proto";
 
-message PositiionQuanta {
+message PositionQuanta {
     google.protobuf.Timestamp time = 1;
     PositiionProfile profile = 2;
 
@@ -13,6 +13,6 @@ message PositiionQuanta {
     }
 }
 
-message PositiionLog {
-    repeated PositiionQuanta quantas = 1;
+message PositionLog {
+    repeated PositionQuanta quantas = 1;
 }

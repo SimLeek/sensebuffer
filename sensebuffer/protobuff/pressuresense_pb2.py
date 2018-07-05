@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='PressureSense',
   syntax='proto3',
   serialized_options=None,
-  serialized_pb=_b('\n\x13pressuresense.proto\x12\rPressureSense\x1a\x1fgoogle/protobuf/timestamp.proto\"\x9a\x01\n\x0ePressureQuanta\x12(\n\x04time\x18\x01 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12>\n\x07profile\x18\x02 \x01(\x0b\x32-.PressureSense.PressureQuanta.PressureProfile\x1a\x1e\n\x0fPressureProfile\x12\x0b\n\x03mpa\x18\x01 \x01(\x02\">\n\x0cGyroscopeLog\x12.\n\x07quantas\x18\x01 \x03(\x0b\x32\x1d.PressureSense.PressureQuantab\x06proto3')
+  serialized_pb=_b('\n\x13pressuresense.proto\x12\rPressureSense\x1a\x1fgoogle/protobuf/timestamp.proto\"\x9a\x01\n\x0ePressureQuanta\x12(\n\x04time\x18\x01 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12>\n\x07profile\x18\x02 \x01(\x0b\x32-.PressureSense.PressureQuanta.PressureProfile\x1a\x1e\n\x0fPressureProfile\x12\x0b\n\x03mpa\x18\x01 \x01(\x02\"=\n\x0bPressureLog\x12.\n\x07quantas\x18\x01 \x03(\x0b\x32\x1d.PressureSense.PressureQuantab\x06proto3')
   ,
   dependencies=[google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,])
 
@@ -95,15 +95,15 @@ _PRESSUREQUANTA = _descriptor.Descriptor(
 )
 
 
-_GYROSCOPELOG = _descriptor.Descriptor(
-  name='GyroscopeLog',
-  full_name='PressureSense.GyroscopeLog',
+_PRESSURELOG = _descriptor.Descriptor(
+  name='PressureLog',
+  full_name='PressureSense.PressureLog',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='quantas', full_name='PressureSense.GyroscopeLog.quantas', index=0,
+      name='quantas', full_name='PressureSense.PressureLog.quantas', index=0,
       number=1, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
@@ -122,15 +122,15 @@ _GYROSCOPELOG = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=228,
-  serialized_end=290,
+  serialized_end=289,
 )
 
 _PRESSUREQUANTA_PRESSUREPROFILE.containing_type = _PRESSUREQUANTA
 _PRESSUREQUANTA.fields_by_name['time'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
 _PRESSUREQUANTA.fields_by_name['profile'].message_type = _PRESSUREQUANTA_PRESSUREPROFILE
-_GYROSCOPELOG.fields_by_name['quantas'].message_type = _PRESSUREQUANTA
+_PRESSURELOG.fields_by_name['quantas'].message_type = _PRESSUREQUANTA
 DESCRIPTOR.message_types_by_name['PressureQuanta'] = _PRESSUREQUANTA
-DESCRIPTOR.message_types_by_name['GyroscopeLog'] = _GYROSCOPELOG
+DESCRIPTOR.message_types_by_name['PressureLog'] = _PRESSURELOG
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 PressureQuanta = _reflection.GeneratedProtocolMessageType('PressureQuanta', (_message.Message,), dict(
@@ -148,12 +148,12 @@ PressureQuanta = _reflection.GeneratedProtocolMessageType('PressureQuanta', (_me
 _sym_db.RegisterMessage(PressureQuanta)
 _sym_db.RegisterMessage(PressureQuanta.PressureProfile)
 
-GyroscopeLog = _reflection.GeneratedProtocolMessageType('GyroscopeLog', (_message.Message,), dict(
-  DESCRIPTOR = _GYROSCOPELOG,
+PressureLog = _reflection.GeneratedProtocolMessageType('PressureLog', (_message.Message,), dict(
+  DESCRIPTOR = _PRESSURELOG,
   __module__ = 'pressuresense_pb2'
-  # @@protoc_insertion_point(class_scope:PressureSense.GyroscopeLog)
+  # @@protoc_insertion_point(class_scope:PressureSense.PressureLog)
   ))
-_sym_db.RegisterMessage(GyroscopeLog)
+_sym_db.RegisterMessage(PressureLog)
 
 
 # @@protoc_insertion_point(module_scope)
